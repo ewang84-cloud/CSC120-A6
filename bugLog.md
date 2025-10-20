@@ -19,8 +19,8 @@ Brief description:  The method Buy in ResaleShop class was errored, the new comp
 Failed unit test: testResaleBuy
 
 ## Bug 6
-Brief description:  
-Failed unit test: 
+Brief description:  In the Print Inventory method in Resale shop, the condition for (int i = 0; i <= this.inventory.size(); i++) is wrong, the number between 0 and i are one more than i, thus it will report IndexOutOfBoundsException.
+Failed unit test: testPrintInventory
 
 ## Bug 7
 Brief description:  

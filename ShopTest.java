@@ -49,4 +49,16 @@ public void testResaleBuy (){
     assertEquals("Dell", theAddedComputer.description);
 }
 
+@Test
+public void testPrintInventory(){
+    ResaleShop R3 = new ResaleShop();
+    try {
+        R3.printInventory();
+    } catch (IndexOutOfBoundsException e) {
+        fail("printInventory should not throw IndexOutOfBoundsException: " + e.getMessage());
+    }
+}
+
+
+
 }

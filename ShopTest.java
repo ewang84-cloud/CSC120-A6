@@ -29,6 +29,24 @@ public void testSetOS(){
 }
 
 @Test
-public void test
+public void testResaleShopConstructor (){
+    ResaleShop R1 = new ResaleShop();
+    assertEquals(0, R1.inventory.size());
+}
+
+@Test
+public void testResaleBuy (){
+    ResaleShop R2 = new ResaleShop();
+    Computer C2 = new Computer("Del","i1", 10, 10, "Windows", 2015, 599);
+    
+    try {
+        R2.buy(C2);
+    } catch (Exception e) {
+    
+    }
+    
+    Computer theAddedComputer = R2.inventory.get(R2.inventory.size()-1);
+    assertEquals("Dell", theAddedComputer.description);
+}
 
 }

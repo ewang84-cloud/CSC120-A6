@@ -11,12 +11,12 @@ Brief description:  The SetOS method in Computer Class is not working, it will n
 Failed unit test: testSetOS
 
 ## Bug 4
-Brief description:  
-Failed unit test: 
+Brief description:  The constructor of the resale shop will automatically put one computer in the Inventory when the meaning of constucing a new inventory for the resale shop is to create a new empty arraylist of computers
+Failed unit test: testResaleShopConstructor
 
 ## Bug 5
-Brief description:  
-Failed unit test: 
+Brief description:  The method Buy in ResaleShop class was errored, the new computer added into the inventory is not the new one with the description and folloing attributes from the input, but is always the one written in the method with "2019 MacBook Pro", "Intel", 256, 16, "High Sierra", 2019, 1000
+Failed unit test: testResaleBuy
 
 ## Bug 6
 Brief description:  

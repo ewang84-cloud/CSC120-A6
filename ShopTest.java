@@ -3,8 +3,11 @@ import org.junit.Test;
 
 public class ShopTest{
 
+/**
+ * tester that tests the comstructor from the computer class, see if it constructs a new instance with the wanted attributes. This one is especially for tesing the memory attribute
+ */
 @Test
-public void testComputerConstructor1(){
+public void testComputerConstructorMemory(){
     Computer C1 = new Computer("Mac Air", "ios18", 16, 6, "IOS", 2022, 899);
     assertEquals("Mac Air", C1.description);
     assertEquals("ios18", C1.processorType);
@@ -15,12 +18,18 @@ public void testComputerConstructor1(){
     assertEquals(899, C1.price);
 } 
 
+/**
+ * tester that tests the comstructor from the computer class, see if it constructs a new instance with the wanted attributes. This one is especially for tesing the price attribute
+ */
 @Test
 public void testComputerConstructorPrice(){
     Computer C1 = new Computer("Mac Air", "ios18", 16, 6, "IOS", 2022, 899);
     assertEquals(899, C1.price);
 }
 
+/**
+ * tester that tests the SetOS method in computer class, see if it really sets the OS of the computer into the newly inputed one
+ */
 @Test
 public void testSetOS(){
     Computer C1 = new Computer("Mac Air", "ios18", 16, 6, "IOS", 2022, 899);
@@ -28,12 +37,18 @@ public void testSetOS(){
     assertEquals("IOS-2", C1.operatingSystem);
 }
 
+/**
+ * tester that tests the constructor in the ResaleShop, see if it construcs an instance with the attributes that we want, this one is especially for size
+ */
 @Test
 public void testResaleShopConstructor (){
     ResaleShop R1 = new ResaleShop();
     assertEquals(0, R1.inventory.size());
 }
 
+/**
+ * tester that tests the Buy method in Resale shop, see if it is buying the computer that we wants
+ */
 @Test
 public void testResaleBuy (){
     ResaleShop R2 = new ResaleShop();
@@ -49,6 +64,9 @@ public void testResaleBuy (){
     assertEquals("Dell", theAddedComputer.description);
 }
 
+/**
+ * tester that tests the Print Inventory method in ResaleShop class, see if it prints out the inventory correctly, without any error
+ */
 @Test
 public void testPrintInventory(){
     ResaleShop R3 = new ResaleShop();
@@ -59,6 +77,10 @@ public void testPrintInventory(){
     }
 }
 
+/**
+ * tester that tests the Refurbish method in ResaleShop, see if the comparison method that we're using here will run down smoothly
+ * @throws Exception
+ */
 @Test
 public void testRefurbishStringComparison() throws Exception {
     ResaleShop R4 = new ResaleShop();
@@ -71,7 +93,10 @@ public void testRefurbishStringComparison() throws Exception {
     assertEquals(originalOS, C3.operatingSystem);
 }
 
-
+/**
+ * testor that tests the price logic of the Reburbish method in Resale Shop Class, if there's an strange pricing logic for the old and new computers, it would cause error
+ * @throws Exception
+ */
 @Test
 public void testRefurbishPriceLogic() throws Exception {
     ResaleShop R5 = new ResaleShop();
@@ -87,7 +112,9 @@ public void testRefurbishPriceLogic() throws Exception {
     assertTrue("Old computer should be cheaper", oldComp.price < newerComp.price);
 }
 
-
+/**
+ * Testor that tests the sell method in ResaleShop class, see if method throws a exception if computer that we'retrying to check if it's in the inventory before selling it is not in the inventory
+ */
 @Test
 public void testSellNonexistent() {
     ResaleShop R6 = new ResaleShop();
@@ -101,7 +128,10 @@ public void testSellNonexistent() {
 }
 
 
+/**
+ * Testor that tests the buy method in ResaleShop class, see if method throws a exception if computer that we'retrying to check zif it's in the inventory before buying it is not in the inventory
 
+ */
 @Test
 public void testBuyDuplicate() {
     ResaleShop R7 = new ResaleShop();
